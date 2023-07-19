@@ -1,8 +1,8 @@
 // Initialize the self-employee class and its abstract methods.
 abstract class SelfEmployee {
-  codredd: number = 0
-  netIncome: number = 0
-  netProfit: number = 0
+  codredd!: number
+  netIncome!: number
+  netProfit!: number
 
   constructor(
     public grossAnnualIncome: number,
@@ -31,9 +31,6 @@ class Linguist extends SelfEmployee {
   codredd: number = 40
   constructor(grossAnnualIncome: number, inpsTax: number, irpefTax: number) {
     super(grossAnnualIncome, inpsTax, irpefTax)
-    this.grossAnnualIncome
-    this.inpsTax
-    this.irpefTax
     this.getTaxProfit(this.codredd, grossAnnualIncome)
     this.getInpsTax()
     this.getIrpefTax()
@@ -45,9 +42,6 @@ class Developer extends SelfEmployee {
   codredd: number = 50
   constructor(grossAnnualIncome: number, inpsTax: number, irpefTax: number) {
     super(grossAnnualIncome, inpsTax, irpefTax)
-    this.grossAnnualIncome
-    this.inpsTax
-    this.irpefTax
     this.getTaxProfit(this.codredd, grossAnnualIncome)
     this.getInpsTax()
     this.getIrpefTax()
@@ -59,9 +53,6 @@ class Sewer extends SelfEmployee {
   codredd: number = 30
   constructor(grossAnnualIncome: number, inpsTax: number, irpefTax: number) {
     super(grossAnnualIncome, inpsTax, irpefTax)
-    this.grossAnnualIncome
-    this.inpsTax
-    this.irpefTax
     this.getTaxProfit(this.codredd, grossAnnualIncome)
     this.getInpsTax()
     this.getIrpefTax()
